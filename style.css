@@ -1,5 +1,135 @@
-h1{
-    font-family:"Island Moments", cursive;
-    position: static;
-    }
-h2{font-family:"Jacques Francois", serif; }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* or any fixed height */
+}
+
+.black_rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* full height of header */
+  background-color: black;
+  z-index: 0;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* scales image to fill container */
+  z-index: 1;
+}
+
+/* Foreground content */
+.header-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+/* Banner always on top */
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 3;
+  overflow: hidden; /* important to ensure marquee isn't visually clipped */
+}
+
+.red_rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+}
+  
+  /* Marquee text on top */
+  .banner marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family:"Jacques Francois", serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    line-height: 70px;
+    z-index: 2; /* above the image */
+  }
+
+  .header-content {
+    position: absolute;
+    top: 450px;       /* Move down the screen */
+    left: 10%;        /* Starting from 10% from the left */
+    transform: translateX(-10%);  /* Pulls it slightly left */
+    text-align: center;
+    z-index: 4;
+  }
+  
+  .header-content h1 {
+    font-family: "Snell Roundhand", cursive;
+    font-size: 150px;
+    color: white;
+    margin: 0 0 10px 0; /* bottom margin to separate from h2 */
+  }
+  
+  .header-content h2 {
+    font-family: "Jacques Francois", serif;
+    font-size: 50px;
+    color: white;
+    margin: 0;
+  }
+
+
+
+  .retro_lines {
+    position: absolute;
+    top: 150px; /* adjust to fit below the headings */
+    left: 40px;
+    width: 650px;
+    z-index: 2; /* behind headings */
+  }
+
+
+  nav {
+    background-color: black;
+    height: 70px; /* or whatever height you want */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* or space-between if you want spacing */
+    z-index: 5;
+    position: relative; /* or fixed if you want it to stay at the top */
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* space between nav items */
+    margin: 0;
+    padding: 0;
+    top: 900px;
+  }
+  
+  nav ul li {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+  }

@@ -75,7 +75,7 @@ header {
 
   .header-content {
     position: absolute;
-    top: 450px;       /* Move down the screen */
+    top: 400px;       /* Move down the screen */
     left: 10%;        /* Starting from 10% from the left */
     transform: translateX(-10%);  /* Pulls it slightly left */
     text-align: center;
@@ -106,30 +106,29 @@ header {
     z-index: 2; /* behind headings */
   }
 
-
   nav {
     background-color: black;
-    height: 70px; /* or whatever height you want */
+    height: 70px; /* Keep this as is */
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center; /* or space-between if you want spacing */
+    justify-content: center;
+    position: relative;
     z-index: 5;
-    position: relative; /* or fixed if you want it to stay at the top */
   }
-
+  
   nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* space between nav items */
+    white-space: nowrap;
+    gap: 40px;
     margin: 0;
-    padding: 0;
-    top: 900px;
+    padding: 1000px 0 0 750px; /* Push words down by 10px */
   }
   
   nav ul li {
     color: white;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-family:"Jacques Francois", serif;
+    font-size: 22px;
     cursor: pointer;
   }

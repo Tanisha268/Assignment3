@@ -8,7 +8,117 @@ body, html {
 header {
   position: relative;
   width: 100%;
-  height: 100vh; /* or any fixed height */
+  height: 100vh;
+  overflow:hidden; /* or any fixed height */
+}
+
+/* FIRST MOVING IMAGES STACK */
+.moving_images_one {
+  width: 10%;
+  height: 200%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 65%;
+  z-index: 2;
+}
+
+.image_stack_one {
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  animation: moveImagesUp 10s linear infinite;
+}
+
+.image_stack_one img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes moveImagesUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+
+/* SECOND MOVING IMAGES STACK */
+.moving_images_two {
+  width: 10%;
+  height: 200%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 77%;
+  z-index: 2;
+}
+
+.image_stack_two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  animation: moveImagesDown 10s linear infinite;
+}
+
+.image_stack_two img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes moveImagesDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* THIRD MOVING IMAGES STACK */
+.moving_images_three {
+  width: 10%;
+  height: 200%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 89%;
+  z-index: 2;
+}
+
+.image_stack_three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  animation: moveImagesUp 10s linear infinite;
+}
+
+.image_stack_three img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes moveImagesUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
 }
 
 .black_rectangle {
@@ -56,9 +166,11 @@ header {
   left: 0;
   width: 100%;
   height: 70px;
-  z-index: 1;
+  z-index: 10;
 }
   
+
+
   /* Marquee text on top */
   .banner marquee {
     position: absolute;
@@ -70,7 +182,7 @@ header {
     font-weight: bold;
     color: white;
     line-height: 70px;
-    z-index: 2; /* above the image */
+    z-index: 12; /* above the image */
   }
 
   .header-content {
@@ -79,7 +191,7 @@ header {
     left: 10%;        /* Starting from 10% from the left */
     transform: translateX(-10%);  /* Pulls it slightly left */
     text-align: center;
-    z-index: 4;
+    z-index: 6;
   }
   
   .header-content h1 {
@@ -87,6 +199,7 @@ header {
     font-size: 150px;
     color: white;
     margin: 0 0 10px 0; /* bottom margin to separate from h2 */
+    z-index: 6;
   }
   
   .header-content h2 {
@@ -96,8 +209,6 @@ header {
     margin: 0;
   }
 
-
-
   .retro_lines {
     position: absolute;
     top: 150px; /* adjust to fit below the headings */
@@ -106,6 +217,7 @@ header {
     z-index: 2; /* behind headings */
   }
 
+  /* THIS SECTION IS FOR THE NAVIGATION BAR */
   nav {
     background-color: black;
     height: 70px; /* Keep this as is */
@@ -131,4 +243,68 @@ header {
     font-family:"Jacques Francois", serif;
     font-size: 22px;
     cursor: pointer;
+  }
+
+  /*CUSTOMER REVIEW SECTION */
+  .Customer_Review_Section {
+    display: flex;
+    position:relative;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    font-size: 0; /* Removes whitespace between inline-block elements */
+  }
+  
+  .Customer_Review_Section img {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .customer-reviews-heading {
+    position: absolute;
+    top: 0%;
+    left: 38%;
+    color: rgb(0, 0, 0);
+    font-size: 45px;
+    font-family: "Didot", "Georgia", serif;
+    font-weight: normal;
+    text-align: centre;
+    z-index: 5;
+  }
+
+  .first-review {
+    position:absolute;
+    top: 50%;
+    left: 10%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: "Jacques Francois", serif;
+    font-weight: normal;
+    text-align: centre;
+    z-index: 5;
+  }
+
+  .second-review {
+    position:absolute;
+    top: 50%;
+    left: 40%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: "Jacques Francois", serif;
+    font-weight: normal;
+    text-align: centre;
+    z-index: 5;
+  }
+
+  .third-review {
+    position:absolute;
+    top: 50%;
+    left: 70%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: "Jacques Francois", serif;
+    font-weight: normal;
+    text-align: centre;
+    z-index: 5;
   }

@@ -330,22 +330,48 @@ header {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Even spacing */
     align-items: center;
-    padding: 60px 40px 40px;  /* Give it a top padding to breathe */
-    flex-wrap: wrap;
-    margin: 0;
-    background-color: rgba(255, 0, 0, 0.2); /* temp debug red */
+    padding: 60px 5px 40px 20px;
+    flex-wrap: nowrap; /* Prevent wrapping to keep layout even */
+    overflow: hidden; /* Important to hide the clipped image overflow */
+    gap: 25px; /* Optional: consistent gap between items */
   }
+  
   .shop_categories div {
     text-align: center;
-    margin: 20px;
+    flex: 1 1 0; /* Equal size for all items */
+  min-width: 295px;
   }
-
+  
   .shop_categories img {
-    max-width: 150px;
+    width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
   }
+  
 
+  .shop_categories-wrapper {
+    width: 100%;
+    overflow-x: hidden; /* ✅ This hides any content that goes past the right edge */
+  }
+  
+  .shop_categories p {
+    font-family: 'Marcellus SC', serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    }
+    
+    .shopping_categories_heading {
+      position: relative;
+      text-align: center;
+      font-size: 45px;
+      font-weight: normal;
+      font-family: "Marcellus SC", serif;
+      color: white;
+      z-index: 2;
+         /* Space between heading and images */
+    }

@@ -5,6 +5,11 @@ body, html {
   overflow-x: hidden;
 }
 
+section {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   position: relative;
   width: 100%;
@@ -151,17 +156,16 @@ header {
 
 /* Banner always on top */
 .banner {
-  position: fixed;
+  position:relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 70px;
   z-index: 3;
-  overflow: hidden; /* important to ensure marquee isn't visually clipped */
 }
 
 .red_rectangle {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -169,8 +173,6 @@ header {
   z-index: 10;
 }
   
-
-
   /* Marquee text on top */
   .banner marquee {
     position: absolute;
@@ -233,9 +235,9 @@ header {
     list-style: none;
     display: flex;
     white-space: nowrap;
-    gap: 40px;
+    gap: 35px;
     margin: 0;
-    padding: 1000px 0 0 750px; /* Push words down by 10px */
+    padding: 1000px 0 0 800px; /* Push words down by 10px */
   }
   
   nav ul li {
@@ -247,64 +249,103 @@ header {
 
   /*CUSTOMER REVIEW SECTION */
   .Customer_Review_Section {
-    display: flex;
-    position:relative;
-    padding: 0;
+    position: relative;
+    padding: 60px 20px 0px;
+    
+    background-color: rgba(0, 255, 0, 0.2); /* light green for debugging */
+    overflow: hidden;
+    z-index: 1;
     margin: 0;
-    gap: 0;
-    font-size: 0; /* Removes whitespace between inline-block elements */
+    background-image: url('background\ retro\ image.jpg');
   }
   
-  .Customer_Review_Section img {
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .customer-reviews-heading {
+  /* Background image container */
+  .background-images {
     position: absolute;
-    top: 0%;
-    left: 38%;
-    color: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 85%;
+    z-index: 0;
+  }
+  
+  .background-images img {
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Heading stays above background */
+  .customer-reviews-heading {
+    position: relative;
+    text-align: center;
     font-size: 45px;
-    font-family: "Didot", "Georgia", serif;
+    margin: 0 0 40px 0;
     font-weight: normal;
-    text-align: centre;
-    z-index: 5;
+    font-family: "Marcellus SC", serif;
+    color: black;
+    margin-bottom: 40px;
+    z-index: 2;
+  }
+  
+  /* Reviews container */
+  .review-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+   
+
+  }
+  .review p {
+    margin-top: 8px;   /* Reduce space between icon and text */
   }
 
-  .first-review {
-    position:absolute;
-    top: 50%;
-    left: 10%;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
+  .review {
+    flex: 1 1 30%;
+    min-width: 250px;
+    text-align: center;
+    font-size: 25px;
     font-family: "Jacques Francois", serif;
-    font-weight: normal;
-    text-align: centre;
-    z-index: 5;
+    color: black;
+    align-items: center; /* horizontally center icon + text */
+    padding-bottom: 0px;
+
+  }
+  .review img {
+    width: auto;              /* Adjust as needed */
+    height: auto;
+    margin-bottom: 2px;       /* Reduce gap between icon and text */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;       /* Center the icon */
   }
 
-  .second-review {
-    position:absolute;
-    top: 50%;
-    left: 40%;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-family: "Jacques Francois", serif;
-    font-weight: normal;
-    text-align: centre;
-    z-index: 5;
+
+  /* SHOP CATEGORIES SECITON */
+  .shop_categories {
+    background-image: url('red_gradient_background.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 40px 40px;  /* Give it a top padding to breathe */
+    flex-wrap: wrap;
+    margin: 0;
+    background-color: rgba(255, 0, 0, 0.2); /* temp debug red */
+  }
+  .shop_categories div {
+    text-align: center;
+    margin: 20px;
   }
 
-  .third-review {
-    position:absolute;
-    top: 50%;
-    left: 70%;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-family: "Jacques Francois", serif;
-    font-weight: normal;
-    text-align: centre;
-    z-index: 5;
+  .shop_categories img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
+

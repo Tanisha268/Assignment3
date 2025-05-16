@@ -14,7 +14,7 @@ header {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow:hidden; /* or any fixed height */
+  overflow: hidden; /* or any fixed height */
 }
 
 /* FIRST MOVING IMAGES STACK */
@@ -251,7 +251,6 @@ header {
   .Customer_Review_Section {
     position: relative;
     padding: 60px 20px 0px;
-    
     background-color: rgba(0, 255, 0, 0.2); /* light green for debugging */
     overflow: hidden;
     z-index: 1;
@@ -279,8 +278,8 @@ header {
   .customer-reviews-heading {
     position: relative;
     text-align: center;
-    font-size: 45px;
-    margin: 0 0 40px 0;
+    font-size: 55px;
+    margin: -5px 0 40px 0;
     font-weight: normal;
     font-family: "Marcellus SC", serif;
     color: black;
@@ -329,49 +328,124 @@ header {
     background-image: url('red_gradient_background.png');
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: space-between; /* Even spacing */
-    align-items: center;
-    padding: 60px 5px 40px 20px;
-    flex-wrap: nowrap; /* Prevent wrapping to keep layout even */
-    overflow: hidden; /* Important to hide the clipped image overflow */
-    gap: 25px; /* Optional: consistent gap between items */
+    padding: 40px 10px 10px 10px;
+    overflow: hidden;
   }
   
-  .shop_categories div {
+  .shopping_categories_heading {
     text-align: center;
-    flex: 1 1 0; /* Equal size for all items */
-  min-width: 295px;
+    font-size: 55px;
+    margin: -10px 0 40px 0; /* Moves it up by 10px */
+    font-weight: normal;
+    font-family: "Marcellus SC", serif;
+    color: white;
   }
   
-  .shop_categories img {
+  .categories_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: nowrap;
+  }
+  
+  .categories_row > div {
+    flex: 1 1 0;
+    min-width: 295px;
+    text-align: center;
+  }
+  
+  .categories_row img {
     width: 100%;
     height: auto;
     display: block;
   }
   
-
-  .shop_categories-wrapper {
-    width: 100%;
-    overflow-x: hidden; /* ✅ This hides any content that goes past the right edge */
-  }
-  
-  .shop_categories p {
+  .categories_row p {
     font-family: 'Marcellus SC', serif;
     font-size: 30px;
-    text-align: center;
     margin-top: 10px;
-    color: #ffffff;
+    color: white;
     letter-spacing: 1px;
+  }
+
+  .categories_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  
+  .categories_row > div {
+    flex: 1 1 calc(20% - 20px); /* 5 per row by default */
+    min-width: 180px;
+    text-align: center;
+  }
+  
+  /* Stack into 2 per row on tablets */
+  @media (max-width: 900px) {
+    .categories_row > div {
+      flex: 1 1 calc(50% - 20px);
     }
-    
-    .shopping_categories_heading {
-      position: relative;
-      text-align: center;
-      font-size: 45px;
-      font-weight: normal;
-      font-family: "Marcellus SC", serif;
-      color: white;
-      z-index: 2;
-         /* Space between heading and images */
+  }
+  
+  /* Stack into 1 per row on mobile */
+  @media (max-width: 500px) {
+    .categories_row > div {
+      flex: 1 1 100%;
     }
+  }
+
+  /* ABOUT US SECTION*/
+  .about_us_section {
+    background-image: url('clothing_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 30px 0px 30px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about_us_content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .about_us_heading {
+    font-size: 55px;
+    margin-bottom: 20px;
+    margin-top: -6px;
+    font-family: "Marcellus SC", serif;
+    font-weight: normal;
+  }
+  
+  .about_us_paragraph {
+    font-size: 30px;
+    line-height: 1.8;
+    font-family: "Jacques Francois", serif;
+  }
+  
+  /* Responsive typography */
+  @media (max-width: 768px) {
+    .about_us_heading {
+      font-size: 36px;
+    }
+  
+    .about_us_paragraph {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about_us_heading {
+      font-size: 28px;
+    }
+  
+    .about_us_paragraph {
+      font-size: 16px;
+    }
+  }

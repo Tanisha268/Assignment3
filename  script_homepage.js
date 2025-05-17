@@ -1,4 +1,5 @@
-console.log("JS file loaded!");
+  /*------------------ THIS SECTION IS FOR ADDING THE WHITE SEARCH RESULTS -----------------------*/
+onsole.log("JS file loaded!");
   window.onload = function() {
     const menswearBtn = document.getElementById("menswear-btn");
     const menswearBox = document.getElementById("menswear-box");
@@ -13,6 +14,8 @@ console.log("JS file loaded!");
     });
   };
 
+
+  /*------------------ THIS SECTION IS FOR BEING ABLE TO CLICK MENSWEAR -----------------------*/  
   window.onload = function () {
     const toggleBtn = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav_links');
@@ -21,7 +24,7 @@ console.log("JS file loaded!");
       navLinks.classList.toggle('active');
     });
   };
-  
+
   window.onload = function () {
     const toggleBtn = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav_links');

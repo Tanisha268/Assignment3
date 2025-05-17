@@ -17,7 +17,7 @@ header {
   overflow: hidden; /* or any fixed height */
 }
 
-/* FIRST MOVING IMAGES STACK */
+  /*------------------ THIS SECTION IS FOR THE FIRST MOVING IMAGE STACK -----------------------*/
 .moving_images_one {
   width: 10%;
   height: 200%;
@@ -54,7 +54,7 @@ header {
 }
 
 
-/* SECOND MOVING IMAGES STACK */
+  /*------------------ THIS SECTION IS FOR THE SECOND MOVING IMAGES STACK -----------------------*/
 .moving_images_two {
   width: 10%;
   height: 200%;
@@ -90,7 +90,7 @@ header {
   }
 }
 
-/* THIRD MOVING IMAGES STACK */
+  /*------------------ THIS SECTION IS FOR THE THIRD MOVING IMAGES STACK -----------------------*/
 .moving_images_three {
   width: 10%;
   height: 200%;
@@ -125,7 +125,7 @@ header {
     transform: translateY(-50%);
   }
 }
-
+  /*------------------ THIS SECTION IS FOR THE BANNER  -----------------------*/
 .black_rectangle {
   position: absolute;
   top: 0;
@@ -162,7 +162,7 @@ header {
   overflow: hidden;
   z-index: 3;
 }
-
+  /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
 .red_rectangle {
   position: absolute;
   top: 0;
@@ -209,7 +209,7 @@ header {
     transform: translateX(-50%);
   }
 }
-
+  /*------------------ THIS SECTION IS FOR THE WORDS + DESIGN ON THE BANNER -----------------------*/
   .header-content {
     position: absolute;
     top: 400px;       /* Move down the screen */
@@ -242,7 +242,7 @@ header {
     z-index: 2; /* behind headings */
   }
 
-  /* THIS SECTION IS FOR THE NAVIGATION BAR */
+  /*------------------ THIS SECTION IS FOR THE NAVIGATION BAR -----------------------*/
   nav {
     position: relative;
     background-color: black;
@@ -344,60 +344,151 @@ header {
   }
 }
   
-  /* ADDING THE WHITE BOX FOR SEARCH RESULTS*/
+ /*------------------ THIS SECTION IS FOR THE WHITE SEARCH RESULTS -----------------------*/
   
   #menswear-btn .dropdown-wrapper {
     position: relative;
     display: inline-block;
   }
 
-  #menswear-btn .dropdown-wrapper:hover {
+  #menswear-btn:hover {
    text-decoration: underline;
   }
   /* The dropdown box */
   #menswear-box {
     position: absolute;
-    top: 95%;
-    height: 500%;
-    width: 50%;
-    left: 25%;
+    top: 100%;
+    width: 70%;
+    height: 800%;
     padding: 15px;
     display: none;
     z-index: 100;
     background-color: rgb(250, 249, 249);
-    border-radius: 5%;
-    border: 2px solid rgb(84, 83, 83); /* Adding border width and style */ 
-   }
+    border-radius: 10px;
+    border: 2px solid rgb(84, 83, 83);
+    box-sizing: border-box;
+    box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.3); /* ← shadow added here */
+  }
 
     #menswear-box h2 {
       position: absolute;
-      font-size: 25px;
+      font-size: 35px;
       color: black;
-      margin: 8px 0;
+      margin: 2px 0;
       font-family: "Marcellus SC", serif;
+      font-weight: normal;
+      text-decoration: underline;
     }
-
-    #menswear-box h2:nth-child(1) {
+    #menswear-box h2:nth-of-type(1) {
       top: 5%;
-      left: 5;
+      left: 8%;
     }
+        /* Style the "Specials" list */
+        .specials-list {
+          list-style-type: none; /* Remove default bullets */
+          padding-left: 0;       /* Remove default padding */
+          margin-bottom: 1em;
+          margin-top: 50px;
+         }
+         
+        /* each item of Specials in search results */ 
+         .specials-list li {
+          color: black;
+          font-size: 19px;
+          padding-top: 5px; 
+          margin-bottom: 8px;
+        }
 
-    #menswear-box h2:nth-child(2) {
+        #menswear-box .specials-list {
+          position: absolute;
+          top: 4%;     /* Move up or down */
+          left: 9%;
+        }
+    
+    #menswear-box h2:nth-of-type(2) {   /* FOR TOPS */
       top: 5%;
       left: 40%;
     }
+        .tops-list {
+          list-style-type: none; /* Remove default bullets */
+          padding-left: 0;       /* Remove default padding */
+          margin-bottom: 1em;
+          margin-top: 50px;
+      
+        }
+        /* each item of Tops in search results */ 
+        .tops-list li {
+          color: black;
+          font-size: 19px;
+          padding-top: 5px;
+          margin-bottom: 8px;
+        }
 
-    #menswear-box h2:nth-child(3) {
-      top: 50%;
+        #menswear-box .tops-list {
+          position: absolute;
+          top: 4%;     /* Move up or down */
+          left: 41%;    /* Move right */
+        }
+
+    #menswear-box h2:nth-of-type(3) {  /* FOR BOTTOMS */
+      top: 70%;
       left: 40%;
     }
+        .bottoms-list {
+          list-style-type: none; 
+          padding-left: 0;       
+          margin-bottom: 1em;
+          margin-top: 50px;
+      
+        }
+        /* each item of Tops in search results */ 
+        .bottoms-list li {
+          color: black;
+          font-size: 19px;
+          padding-top: 5px;
+          margin-bottom: 8px;
+        }
 
-    #menswear-box h2:nth-child(4) {
+        #menswear-box .bottoms-list {
+          position: absolute;
+          top: 69%;     /* Move up or down */
+          left: 42%;    /* Move right */
+        }
+    
+    #menswear-box h2:nth-of-type(4) {
       top: 5%;
       left: 70%;
     }
+        .shopbybrand-list {
+          list-style-type: none; /* Remove default bullets */
+          padding-left: 0;       /* Remove default padding */
+          margin-bottom: 1em;
+          margin-top: 50px;
+      
+        }
+        /* each item of Tops in search results */ 
+        .shopbybrand-list li {
+          color: black;
+          font-size: 19px;
+          padding-top: 5px;
+          margin-bottom: 8px;
+        }
 
-  /*CUSTOMER REVIEW SECTION */
+        #menswear-box .shopbybrand-list {
+          position: absolute;
+          top: 4%;     /* Move up or down */
+          left: 71%;    /* Move right */
+        }
+
+    #menswear-box .denim_model {  /* Image inside the white search results rectanglee */
+          position: absolute;
+          bottom: 7%;
+          left: 8%;
+          width: 150px; /* adjust size as needed */
+          height: auto;
+        }
+
+     /*------------------ THIS SECTION IS FOR THE CUSTOMER REVIEW SECTION -----------------------*/
   .Customer_Review_Section {
     position: relative;
     padding: 60px 20px 0px;
@@ -472,8 +563,7 @@ header {
     margin-right: auto;       /* Center the icon */
   }
 
-
-  /* SHOP CATEGORIES SECITON */
+  /*------------------ THIS SECTION IS FOR THE SHOP CATEGORIES -----------------------*/
   .shop_categories {
     background-image: url('red_gradient_background.png');
     background-size: cover;
@@ -504,7 +594,7 @@ header {
   }
   
   .categories_row img {
-    width: 105%;
+    width: 100%;
     height: auto;
     display: block;
   }
@@ -531,7 +621,7 @@ header {
     }
   }
 
-  /* ABOUT US SECTION*/
+  /*------------------ THIS SECTION IS FOR THE ABOUT US SECTION -----------------------*/
   .about_us_section {
     background-image: url('clothing_background.png');
     background-size: cover;
@@ -586,7 +676,7 @@ header {
     }
   }
 
-  /*BLOG SECTION */
+  /*------------------ THIS SECTION IS FOR THE BLOG SECTION -----------------------*/
   .blog_section {
     background-image:url('red_gradient_background.png');;
     padding: 40px 80px 40px 80px;
@@ -621,7 +711,7 @@ header {
   .blog_images img:hover {
     transform: scale(1.03);
   }
-  
+    /*------------------ THIS SECTION IS FOR THE FOOTER -----------------------*/
   .footer {
     background-image: url('black_rectangle_footer.jpg');
     background-size: cover;

@@ -77,14 +77,35 @@
           <img src="coloured background line.png" class="retro_lines" alt="Retro lines">
           <img src="Star 1.png" class="star_icon" alt="Red star">
 
-
     </header>
 
     <nav>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        &#9776; <!-- Unicode for hamburger icon -->
+      </button>
       <ul class="nav_links">
         <li>Home</li>
         <li>Latest Arrivals</li>
-        <li>Menswear</li>
+        <!-- Move ID to wrapper -->
+        <li>
+          <div class="dropdown-wrapper" id="menswear-btn">
+            Menswear
+            <div id="menswear-box">
+              <h2>Specials</h2>
+              <ul class="specials-list">
+                <li>New In</li>
+                <li>$20 Deals</li>
+                <li>Holiday</li>
+                <li>Band Vintage</li>
+                <li>Denim Overalls</li>
+              </ul>
+              <h2>Tops</h2>
+              <h2>Bottoms</h2>
+              <h2>Shop by Brand</h2>
+            </div>
+          </div>
+        </li>
+    
         <li>Womenswear</li>
         <li>Accessories</li>
         <li>About Us</li>
@@ -99,9 +120,9 @@
         <img src="shoppingcart_icon.png" alt="Shopping Cart">
       </div>
     </nav>
-
+    
+    <script src="javascript.js"></script>
     <main>
-       
         <section class="Customer_Review_Section">
             <h1 class="customer-reviews-heading">Our Customer Reviews</h1>
 
@@ -191,6 +212,5 @@
               <h2>Create Account</h2>
             </div>
           </footer>
-
 </body>
 </html>

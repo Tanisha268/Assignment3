@@ -244,6 +244,7 @@ header {
 
   /* THIS SECTION IS FOR THE NAVIGATION BAR */
   nav {
+    position: relative;
     background-color: black;
     height: 70px;
     width: 100%;
@@ -313,6 +314,88 @@ header {
       height: 32px;
     }
   }
+
+  /* Hide the hamburger by default */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Show it only on small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav_links.active {
+    display: flex;
+  }
+}
+  
+  /* ADDING THE WHITE BOX FOR SEARCH RESULTS*/
+  
+  #menswear-btn .dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  #menswear-btn .dropdown-wrapper:hover {
+   text-decoration: underline;
+  }
+  /* The dropdown box */
+  #menswear-box {
+    position: absolute;
+    top: 95%;
+    height: 500%;
+    width: 50%;
+    left: 25%;
+    padding: 15px;
+    display: none;
+    z-index: 100;
+    background-color: rgb(250, 249, 249);
+    border-radius: 5%;
+    border: 2px solid rgb(84, 83, 83); /* Adding border width and style */ 
+   }
+
+    #menswear-box h2 {
+      position: absolute;
+      font-size: 25px;
+      color: black;
+      margin: 8px 0;
+      font-family: "Marcellus SC", serif;
+    }
+
+    #menswear-box h2:nth-child(1) {
+      top: 5%;
+      left: 5;
+    }
+
+    #menswear-box h2:nth-child(2) {
+      top: 5%;
+      left: 40%;
+    }
+
+    #menswear-box h2:nth-child(3) {
+      top: 50%;
+      left: 40%;
+    }
+
+    #menswear-box h2:nth-child(4) {
+      top: 5%;
+      left: 70%;
+    }
 
   /*CUSTOMER REVIEW SECTION */
   .Customer_Review_Section {
@@ -585,3 +668,4 @@ header {
     height: 20px; /* adjust icon size */
     width: auto;
   }
+

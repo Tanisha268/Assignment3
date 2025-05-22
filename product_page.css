@@ -1,0 +1,52 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*------------------ THIS SECTION IS FOR THE MOVING PROMOTION AT THE TOP -----------------------*/
+.red_rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-image: url("red\ rectangle.png");
+    z-index: 10;
+  }
+  
+  .marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+  }
+  
+  .marquee-content {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scrollText 16s linear infinite;
+  }
+  
+  .marquee-content p {
+    font-family: "Jacques Francois", serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    line-height: 70px;
+    margin: 0;
+    padding-right: 50px; /* spacing between duplicated lines */
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
